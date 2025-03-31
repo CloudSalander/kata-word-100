@@ -3,13 +3,16 @@
 Assuming english alphabet
 */
 define('POINTS_TO_REACH',100);
-define('VALUE_REFERENCE',ord("z"));
-define('ENGLISH_ALPHABET_LENGTH',25);
+define('VALUE_REFERENCE',ord("Z"));
+define('ENGLISH_ALPHABET_LENGTH',26);
 
 #$word = readline();
 $wordPoints = 50;
-echo calculateCharPoints(ord("m"));
-
+$test_chars = ["A","B","Z","H"];
+foreach($test_chars as $char) {
+    echo calculateCharPoints($char).PHP_EOL;;
+}
+/*
 function calculateWordPoints(string $word): int {
     $points = 0;
     $word = strtolower($word);
@@ -18,10 +21,10 @@ function calculateWordPoints(string $word): int {
     }
     return $points;
 }
-
+*/
 
 function calculateCharPoints(string $char): int {
-    return ($char - ord('a'));
+    return ENGLISH_ALPHABET_LENGTH - (VALUE_REFERENCE - ord($char));
 }
 
 
