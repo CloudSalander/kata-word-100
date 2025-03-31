@@ -7,11 +7,11 @@ define('VALUE_REFERENCE',ord("Z"));
 define('ENGLISH_ALPHABET_LENGTH',26);
 
 $word = readline();
-$word_points = calculateWordPoints($word);
+$wordPoints = calculateWordPoints($word);
 
 while($word_points != POINTS_TO_REACH) {
     $word = readline();
-    $word_points = calculateWordPoints($word);
+    $wordPoints = calculateWordPoints($word);
 }
 
 function calculateWordPoints(string $word): int {
